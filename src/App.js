@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
-function App() {  // حرف اول کامپوننت باید بزرگ باشه  App
-  //بعد داخل کامپوننت یک ریترن داریم
+function App() {  
+
+   //without state we use a variable that has probles
+   // let name ='Asadi' //default name
+   const [name,setName] = useState("mahdi")
+
+  const handleClick =()=>{
+       //name='Rect App';
+      setName("Redux")
+      console.log(name);//اینجا مشکل داره  که بعدا مشکل حل می کنیم
+  }
+   //مشکل متغیر این هست که این قابلیت نداره که به کامپوننت بگه دوباره رندر شود
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>{name}</h1>
+        <button onClick={handleClick}>Click</button>
       </header>
     </div>
   );
