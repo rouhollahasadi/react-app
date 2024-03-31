@@ -10,10 +10,10 @@ import reportWebVitals from './reportWebVitals';
 
 
 //کامپوننت خودمون رو به روش زیر رندر می کنیم
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')); //<div id="root"></div>
 root.render(
   <React.StrictMode>
-    <App />
+    <App /> 
   </React.StrictMode>
 );
 //
